@@ -9,8 +9,8 @@ func GetBasicData(r *http.Request) string {
 	q := r.URL.Query()
 	retData := "Response Default"
 	for k, v := range queryMap {
-		if q.Get(k) != "" {
-			retData = v
+		if vv := q.Get(k); vv != "" {
+			retData = v + ": " + vv
 		}
 	}
 	return retData

@@ -11,7 +11,7 @@ import (
 	"github.com/peterbourgon/ff"
 	"github.com/peterbourgon/ff/fftoml"
 
-	"github.com/bagadatp/sample_server/data"
+	"github.com/bagadatp/sample_server/pkg/data"
 )
 
 var version = "v0.0.1-dev"
