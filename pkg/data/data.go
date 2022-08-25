@@ -1,12 +1,13 @@
 package data
 
-import "net/http"
+import (
+	"net/url"
+)
 
 var (
 	queryMap = map[string]string{"a": "Response A", "b": "Response B", "c": "Response C"}
 )
-func GetBasicData(r *http.Request) string {
-	q := r.URL.Query()
+func GetBasicData(q url.Values) string {
 	retData := "Response Default"
 	for k, v := range queryMap {
 		if vv := q.Get(k); vv != "" {

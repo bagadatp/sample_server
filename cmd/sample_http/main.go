@@ -45,7 +45,7 @@ func GetData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	resp:= data.GetBasicData(r)
+	resp:= data.GetBasicData(r.URL.Query())
 	fmt.Fprintf(w, resp)
 }
 
